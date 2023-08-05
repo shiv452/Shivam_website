@@ -1,0 +1,664 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #080808;
+    color: #fff;
+}
+
+#header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/thunder.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    padding: 10px 10%;
+}
+
+.logo {
+    width: 100px;
+    margin-left: -120px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    color: rgb(162, 231, 14); /* Set an appropriate text color to ensure readability */
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: white;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/*home*/
+.home {
+    display: flex;
+    color: #fff;
+    margin-top: 290px;
+}
+
+.home .max-width {
+    width: 100%;
+    display: flex;
+}
+
+.home .max-width .row {
+    margin-right: 0;
+}
+
+.home .home-content .text-1 {
+    font-size: 27px;
+}
+
+.home .home-content .text-2 {
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+
+.home .home-content .text-3 {
+    font-size: 40px;
+    margin: 5px 0;
+}
+
+.home .home-content .text-3 span {
+    background: linear-gradient(135deg, #1a59ab, #fff, rgb(115, 46, 204));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 500;
+}
+
+/* Time Styling */
+#time
+{
+    display: flex;
+    gap: 10px;
+    padding: 90px;
+    margin-top: -85vh;
+}
+
+#time .circle 
+{
+    position: relative;
+    width: 10px;
+    height: 150px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin-top: 150px;
+    margin-left: 6vh;
+    color: #41e9db;
+}
+
+#time div
+{
+    position: absolute;
+    text-align: center;
+    font-weight: 100;
+    font-size: 1.3em;
+}
+
+#time div span
+{
+    position: relative;
+    transform: translateX(-20%) translateY(10px);
+    font-size: 0.6em;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    background: linear-gradient(125deg, navy, rgb(148, 31, 171), white);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;    
+    font-weight: 400;
+}
+
+#time .ap
+{
+    position: relative;
+    font: 1em;
+    transform: translateX(-20px);
+    text-align: left;
+    margin-top: 160px;
+    color: #a5e347;
+}
+
+/* ----------ABOUT---------- */
+#about {
+    padding: 40px 0px;
+    background: linear-gradient(20deg, rgb(173, 173, 173) 100px, black, grey);
+    background-attachment: fixed;
+}
+
+.about_dot {
+    position: absolute;
+    right: 40.5%; /* Adjust this value to position the dot relative to the text */
+    margin-top: 56px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(154, 224, 25);
+    border-radius: 50%;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1 {
+    flex-basis: 35%;
+}
+
+.about-col-1 img {
+    width: 100%;
+    border-radius: 90px 1px 90px;
+    margin-top: 50px;
+}
+
+.about-col-2 {
+    flex-basis: 60%;
+}
+
+.sub-title {
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+    font-family:  'Times New ', cursive;
+}
+
+.tab-titles {
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    color: rgb(213, 159, 31);
+}
+
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: linear-gradient(20deg, rgb(212, 212, 212) 20%, rgb(12, 172, 138) 50%, rgb(255, 255, 255) 100%);
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+/* .tab-links:hover::after{
+width: 100%;
+} */
+.tab-links.active-link::after {
+    width: 50%;
+}
+
+.tab-contents ul li {
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tab-contents ul li span {
+    font-size: 17px;
+    animation: glitter 4s infinite;
+}
+
+@keyframes glitter {
+    0%, 100% {
+        color: rgb(30, 109, 157);
+        text-shadow: none;
+        }
+    50% {
+        color: rgb(111, 42, 201);
+        text-shadow: 0 0 5px rgba(135, 135, 135, 0.8),
+                    0 0 10px rgba(255, 255, 255, 0.8),
+                    0 0 15px rgba(255, 255, 255, 0.8);
+        }
+}
+
+.tab-contents {
+    display: none;
+}
+
+.tab-contents.active-tab {
+    display: block;
+}
+
+/* ----------SERVICES---------- */
+#services {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 75%, transparent 75%, transparent);
+    background-size: 50px 50px;
+    animation: lightning 1s linear infinite;
+}
+
+@keyframes lightning {
+    0%, 100% {
+        background-position: 0 0;
+    }
+    25% {
+        background-position: 0 -100vh;
+    }
+    50% {
+        background-position: -100vh -100vh;
+    }
+    75% {
+        background-position: -100vh 0;
+    }
+}
+
+.service_dot {
+    position: absolute;
+    right: 69.5%; /* Adjust this value to position the dot relative to the text */
+    margin-top: 60px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(154, 224, 25);
+    border-radius: 50%;
+}
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.services-list div {
+    background: #262626;
+    padding: 50px;
+    font-size: 15px;
+    line-height: 30 px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+
+.services-list div i {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.services-list div h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.services-list div a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.services-list div:hover {
+    background: #ff004f;
+    transform: translateY(-10px);
+}
+
+/* ----------PORTFOLIO---------- */
+#portfolio {
+    background-image: radial-gradient(#ffff 1px, transparent 1px), radial-gradient(#0c0333 3px, transparent 1px), linear-gradient(55deg, #0A1828, #178582, #BFA181);
+    background-size: 5px 5px;
+    background-position: 0 0, 2.5px 2.5px;
+    background-color: #0A1828;
+}
+
+.work-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.work {
+    border-radius: 10px 90px;
+    position: relative;
+    overflow: hidden;
+}
+
+.work_dot {
+    position: absolute;
+    right: 72%; /* Adjust this value to position the dot relative to the text */
+    margin-top: 60px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(154, 224, 25);
+    border-radius: 50%;
+}
+
+.work img {
+    width: 100%;
+    height: 60vh;
+    border-radius: 10px 90px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.layer {
+    width: 100%;
+    height: 0;
+    background: linear-gradient(20deg, grey, white, blue);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 16px;
+    transition: height 0.5s;
+    color: rgb(3, 2, 27);
+}
+
+.layer h2 {
+    margin-bottom: 30px;
+}
+
+.layer a {
+    margin-top: 30px;
+    color: #3dd8ce;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: rgb(218, 222, 220);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.work:hover img {
+    transform: scale(1.1);
+}
+
+.work:hover .layer {
+    height: 100%;
+}
+
+.btn {
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #e4c218;
+    padding: 14px 50px;
+    border-radius: 6px;
+    color: #828080;
+    text-decoration: none;
+    transition: background 0.75s;
+}
+
+.btn:hover {
+    background: linear-gradient(50deg, rgb(155, 155, 155), rgb(109, 207, 225), white);
+}
+
+/* ----------CONTACT---------- */
+#contact {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 92vh;
+}
+
+.contact_dot {
+    position: absolute;
+    margin-top: 60px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(154, 224, 25);
+    border-radius: 50%;
+}
+
+.contact-left {
+    flex-basis: 30%;
+    margin-top: 90px;
+}
+
+.contact-right {
+    flex-basis: 60%;
+    margin-top: 90px;
+}
+
+.contact-left p {
+    margin-top: 30px;
+}
+
+.contact-left p i {
+    color: #e86113;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.social-icons {
+    margin-top: 30px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #989696;
+    display: inline-block;
+    transition: color 0.5s, transform 0.5s;
+}
+
+.social-icons a:hover {
+    color: #e1de1d;
+    transform: translateY(-5px);
+}
+
+.btn.btn2 {
+    display: inline-block
+}
+
+.btn.btn3 {
+    display: inline-block;
+    background: #080808;
+    margin-top: 30px;
+    transition: background 0.5;
+}
+
+.btn.btn3:hover {
+    background: linear-gradient(30deg, rgb(195, 194, 194) 30%, royalblue 50%, rgb(231, 229, 229) 100%);
+}
+
+.contact-right form {
+    width: 100%;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+.copyright {
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: -10px;
+}
+
+.copyright i {
+    color: #32dddd;
+    transition: color 0.5s;
+}
+
+.copyright i:hover {
+    color: #fff;
+}
+
+nav .fas {
+    display: none;
+}
+
+/* ----------CSS FOR SMALL SCREEN---------- */
+@media only screen and (max-width: 600px) {
+    #header {
+        background-image: url(images/sky.jpeg);
+    }
+
+    nav .fas {
+        display: block;
+        font-size: 25px;
+    }
+
+    nav ul {
+        background: #b54768;
+        position: fixed;
+        top: 0;
+        width: 200;
+        right: 0;
+        height: 100vh;
+        padding-top: 50px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+
+    .logo {
+        margin-left: -60px;
+    }
+
+    #time {
+        padding: 200px;
+        margin-top: -100vh;
+    }
+}
+
+/* ----------CSS FOR SMALL SCREEN---------- */
+@media only screen and (max-width: 600px) {
+
+    /* Adjust the header image and text size for small screens */
+    #header {
+        background-image: url(images/sky.jpeg);
+    }
+
+    /* Show the navigation menu on small screens */
+    nav ul {
+        display: none;
+    }
+
+    nav .fas {
+        display: block;
+        font-size: 25px;
+    }
+
+    nav ul {
+        background: #b54768;
+        position: fixed;
+        top: 0;
+        width: 200px;
+        /* Increased the width to accommodate the menu items */
+        right: 0;
+        height: 100vh;
+        padding-top: 50px;
+        transform: translateX(200px);
+        /* Off-canvas menu, initially hidden */
+        transition: transform 0.3s ease-in-out;
+    }
+
+    nav ul.show {
+        transform: translateX(1);
+        /* Show the menu when 'show' class is applied */
+    }
+
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+
+    #services {
+        height: auto;
+
+    }
+    .services-list div {
+        padding: 20px;
+        margin: 20px;
+        width: 60%;
+        height: 45vh;
+        display: inline-table;
+        margin-left: calc(20% - 8px);
+    }
+
+    .about_dot {
+        position: relative;
+        right: -2px;
+    }
+
+    .service_dot {
+        position: relative;
+        right: -2px;
+    }
+
+    .work_dot {
+        position: relative;
+        right: -2px;
+    }
+
+}
