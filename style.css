@@ -509,7 +509,7 @@ width: 100%;
     display: inline-block;
     background: #080808;
     margin-top: 30px;
-    transition: background 0.5;
+    transition: backgrounds 0.5;
 }
 
 .btn.btn3:hover {
