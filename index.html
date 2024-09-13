@@ -16,19 +16,19 @@
     <div id="header">
         <div class="container">
             <nav>
-                <img src="images/logo.png" class="logo">
+                <img src="images/logo.png" class="logo" alt="Company logo">
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <i class="fas fa-times"></i>
                 </ul>
-                <i class="fas fa-bars"></i>
+                <i class="fas fa-bars"></i> <!-- Open Menu Icon -->
+                <i class="fas fa-times"></i> <!-- Close Menu Icon -->
             </nav>
             
-                        <!--Home-->
+            <!--Home-->
             <section class="home" id="home">
                 <div class="max-width">
                     <div class="home-content">
@@ -40,27 +40,24 @@
             </section>
         </div>
 
-                    <!--Time Clock-->
+        <!--Time Clock-->
         <div id="time">
             <!--Hour-->
             <div class="circle">
-                <div id="hours">00</div>
+                <div class="time-display" id="hours">00</div>
             </div>
             <!--Min-->
             <div class="circle">
-                <div id="minutes">00</div>
+                <div class="time-display" id="minutes">00</div>
             </div>
             <!--Sec-->
             <div class="circle">
-                <div id="seconds">00</div>
+                <div class="time-display" id="seconds">00</div>
             </div>
-
-            <!---->
             <div class="ap">
                 <div id="ampm">AM</div>
             </div>
         </div>
-
     </div>
 
     <!-- ----------ABOUT---------- -->
@@ -180,6 +177,57 @@
         </div>
     </div>
 
+    <!-- ----------ACHIEVEMENT---------- -->
+    <h1 class="sub-title-ach">Achievement<span class="service_dot"></span></h1>
+    <div class="achive-container">
+        <div id="slide">
+            <div class="item" style="background-image: url(/images/.png);">
+                <div class="content">
+                    <div class="name">LUNDEV</div>
+                    <div class="des">Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu</div>
+                    <button>See more</button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(/images/.jpeg);">
+                <div class="content">
+                    <div class="name">LUNDEV</div>
+                    <div class="des">Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu</div>
+                    <button>See more</button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(/images/.jpeg);">
+                <div class="content">
+                    <div class="name">LUNDEV</div>
+                    <div class="des">Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu</div>
+                    <button>See more</button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(/images/.jpeg);">
+                <div class="content">
+                    <div class="name">LUNDEV</div>
+                    <div class="des">Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu</div>
+                    <button>See more</button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(5.jpg);">
+                <div class="content">
+                    <div class="name">LUNDEV</div>
+                    <div class="des">Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu</div>
+                    <button>See more</button>
+                </div>
+            </div>
+        </div>
+        <div class="buttons">
+            <button id="prev"><i class="fa-solid fa-angle-left"></i></button>
+            <button id="next"><i class="fa-solid fa-angle-right"></i></button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+
+    <!-- <script src="script.js"></script> -->
+
+    <!-- End -->
     <!-- ----------CONTACT---------- -->
     <div id="contact">
         <div class="container">
@@ -217,9 +265,12 @@
 
     <footer>
         <div class="copyright">
-            <p>Copyright © Shivam Goyal. Made with <i class="fas fa-heart"></i> by Shivam Goyal</p>
+            <p>Copyright © Shivam Goyal. Made with <i class="fas fa-heart"></i> by Shivam G.</p>
         </div>
     </footer>
+
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/e674bba739.js" crossorigin="anonymous"></script>
 
     <!-- Mobile Version-->
     <script src="/Javascript/mobile.js"></script>
@@ -236,9 +287,3 @@
 <spline-viewer url="https://prod.spline.design/0mBTJmrgqzr2ehai/scene.splinecode"></spline-viewer>
 </body>
 </html>
-
-<!-- /*
-<script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.3/build/spline-viewer.js"></script>
-<spline-viewer url="https://prod.spline.design/0mBTJmrgqzr2ehai/scene.splinecode"></spline-viewer>
-
-*/ -->

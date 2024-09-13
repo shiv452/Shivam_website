@@ -38,16 +38,20 @@ nav {
     flex-wrap: wrap;
 }
 
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
 nav ul li {
     display: inline-block;
-    list-style: none;
-    margin: 10px 20px;
 }
 
 nav ul li a {
-    color: rgb(162, 231, 14); /* Set an appropriate text color to ensure readability */
+    color: rgb(162, 231, 14);
     text-decoration: none;
-    font-size: 18px;
+    font-size: 1.125rem; /* Use rem instead of px for scalable fonts */
     position: relative;
 }
 
@@ -60,7 +64,7 @@ nav ul li a::after {
     position: absolute;
     left: 0;
     bottom: -6px;
-    transition: 0.5s;
+    transition: width 0.5s;
 }
 
 nav ul li a:hover::after {
@@ -70,31 +74,34 @@ nav ul li a:hover::after {
 /*home*/
 .home {
     display: flex;
+    align-items: center;
+    justify-content: center;
     color: #fff;
-    margin-top: 290px;
+    height: 100vh;
 }
 
 .home .max-width {
-    width: 100%;
-    display: flex;
+    /* width: 1%; */
+    /* display: flex; */
+    text-align: center;
+    margin-bottom: 15rem;
 }
 
-.home .max-width .row {
+/* .home .max-width .row {
     margin-right: 0;
-}
+} */
 
 .home .home-content .text-1 {
-    font-size: 27px;
+    font-size: 1.5rem;
 }
 
 .home .home-content .text-2 {
-    font-size: 75px;
+    font-size: 4.5rem;
     font-weight: 600;
-    margin-left: -3px;
 }
 
 .home .home-content .text-3 {
-    font-size: 40px;
+    font-size: 2rem;
     margin: 5px 0;
 }
 
@@ -103,7 +110,6 @@ nav ul li a:hover::after {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 500;
 }
 
 /* Time Styling */
@@ -111,14 +117,14 @@ nav ul li a:hover::after {
 {
     display: flex;
     gap: 10px;
-    padding: 90px;
-    margin-top: -75vh;
-    margin-left: 370px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
 }
 
 #time .circle 
 {
-    position: relative;
+    /* position: relative;
     width: 10px;
     height: 150px;
     display: flex;
@@ -126,39 +132,43 @@ nav ul li a:hover::after {
     align-items: center;
     margin-top: 150px;
     margin-left: 6vh;
-    color: #41e9db;
+    color: #41e9db; */
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: -40rem 0 45rem 0;
+    left: 30rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #7bee38;
 }
 
 #time div
 {
-    position: absolute;
     text-align: center;
-    font-weight: 100;
     font-size: 1.3em;
 }
 
 #time div span
 {
-    position: relative;
-    transform: translateX(-20%) translateY(10px);
-    font-size: 0.6em;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
+    font-size: 0.75em;
     background: linear-gradient(125deg, navy, rgb(188, 31, 220), rgb(73, 225, 23));
-    background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;    
-    font-weight: 400;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
 }
 
 #time .ap
 {
-    position: relative;
+    position: absolute;
     font: 1em;
     transform: translateX(-20px);
     text-align: left;
-    margin-top: 160px;
-    color: rgb(204, 90, 204);
+    margin: -96rem -1.5rem -5rem 80rem;
+    color: rgb(20, 236, 236);
 }
 
 /* ----------ABOUT---------- */
@@ -231,11 +241,12 @@ nav ul li a:hover::after {
     transition: 0.5s;
 }
 
-/* .tab-links:hover::after{
-width: 100%;
-} */
+.tab-links:hover::after{
+    width: 100%;
+}
+
 .tab-links.active-link::after {
-    width: 50%;
+    width: 100%;
 }
 
 .tab-contents ul li {
@@ -271,11 +282,14 @@ width: 100%;
 
 /* ----------SERVICES---------- */
 #services {
-    width: 100%;
+    /* width: 100%;
     height: 100vh;
     background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 75%, transparent 75%, transparent);
     background-size: 50px 50px;
-    animation: lightning 1s linear infinite;
+    animation: lightning 1s linear infinite; */
+    width: 100%;
+    min-height: 100vh;
+    background: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.1), transparent 25px);
 }
 
 @keyframes lightning {
@@ -305,6 +319,10 @@ width: 100%;
 }
 
 .services-list {
+    /* display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px; */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 40px;
@@ -312,13 +330,18 @@ width: 100%;
 }
 
 .services-list div {
-    background: #262626;
+    /* background: #262626;
     padding: 50px;
     font-size: 15px;
     line-height: 30 px;
     font-weight: 300;
     border-radius: 10px;
-    transition: background 0.5s, transform 0.5s;
+    transition: background 0.5s, transform 0.5s; */
+    background: #262626;
+    padding: 50px;
+    font-size: 15px;
+    border-radius: 10px;
+    transition: backgrounds 0.5s, transform 0.5s;
 }
 
 .services-list div i {
@@ -433,13 +456,13 @@ width: 100%;
 .btn {
     display: block;
     margin: 50px auto;
-    width: fit-content;
-    border: 1px solid #e4c218;
     padding: 14px 50px;
+    border: 1px solid #e4c218;
+    width: fit-content;
     border-radius: 6px;
     color: #828080;
     text-decoration: none;
-    transition: background 0.75s;
+    transition: backgrounds 0.75s;
 }
 
 .btn:hover {
@@ -448,10 +471,13 @@ width: 100%;
 
 /* ----------CONTACT---------- */
 #contact {
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
+    min-height: 92vh; */
+    background-size: cover;
     min-height: 92vh;
+    padding: 50px;
 }
 
 .contact_dot {
@@ -499,7 +525,7 @@ width: 100%;
 
 .social-icons a:hover {
     color: #1ad40d;
-    transform: translateY(-5px);
+    transform: translateY(-20px);
 }
 
 .btn.btn2 {
@@ -558,57 +584,190 @@ form textarea {
 nav .fas {
     display: none;
 }
+/* Start */
 
-/* ----------CSS FOR SMALL SCREEN---------- */
-@media only screen and (max-width: 600px) {
-    #header {
-        background-image: url(images/sky.jpeg);
+/* Container for the Achievement Section */
+.achive-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh; 
+    box-shadow: 0 30px 50px rgba(176, 55, 55, 0.7);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Content Styles */
+.sub-title-ach {
+    font-size: 2rem;
+    color: #fff; 
+    z-index: 1;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.achive-container {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    height: auto;
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 30px 50px rgba(219, 219, 219, 0.7);
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+#slide {
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding: 20px 0;
+}
+
+.item {
+    flex: 0 0 200px;
+    height: 300px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    transition: transform 0.5s;
+    border-radius: 20px;
+    box-shadow: 0 30px 50px rgba(80, 80, 80, 0.6);
+    scroll-snap-align: start;
+    margin-right: 20px;
+}
+
+.item .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    text-align: left;
+    padding: 0;
+    color: #eee;
+    transform: translate(-50%, -50%);
+    display: none;
+    font-family: system-ui, sans-serif;
+}
+
+.item.active .content {
+    display: block;
+    z-index: 11111;
+}
+
+.item .name,
+.item .des,
+.item button {
+    opacity: 0;
+    animation: showcontent 1s ease-in-out forwards;
+}
+
+.item .name {
+    font-size: 40px;
+    font-weight: bold;
+    animation-delay: 1s;
+}
+
+.item .des {
+    margin: 20px 0;
+    animation-delay: 1.3s;
+}
+
+.item button {
+    padding: 10px 20px;
+    border: none;
+    animation-delay: 1.6s;
+}
+
+@keyframes showcontent {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+        filter: blur(33px);
     }
-
-    nav .fas {
-        display: block;
-        font-size: 25px;
-    }
-
-    nav ul {
-        background: #b54768;
-        position: fixed;
-        top: 0;
-        width: 200;
-        right: 0;
-        height: 100vh;
-        padding-top: 50px;
-    }
-
-    nav ul li {
-        display: block;
-        margin: 25px;
-    }
-
-    .logo {
-        margin-left: -60px;
-    }
-
-    #time {
-        padding: 200px;
-        margin-top: -110vh;
-        margin-left: 20px;
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
     }
 }
 
-/* ----------CSS FOR SMALL SCREEN---------- */
-@media only screen and (max-width: 600px) {
+.buttons {
+    text-align: center;
+    margin-top: 20px;
+}
 
-    /* Adjust the header image and text size for small screens */
+.buttons button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #555;
+    transition: 0.5s;
+}
+
+.buttons button:hover {
+    background-color: #bac383;
+}
+
+/* @Media code for Mobile Screen */
+
+/* ----------Unified Media Queries for All Screen Sizes---------- */
+@media only screen and (max-width: 768px) {
+    
+    /* Achievements Container */
+    .achive-container {
+        display: flex;
+        width: 100%;
+        padding: 20px;
+        position: relative;
+        flex-wrap: wrap;       
+        justify-content: center; 
+        align-items: center;
+    }
+
+    /* Item Flex Adjustments */
+    .item {
+        flex: 0 0 150px;
+        height: 250px;
+    }
+
+    .item .name {
+        font-size: 1.5rem;
+    }
+
+    .item .des {
+        font-size: 1rem;
+    }
+
+
+    /* Special Handling for Screens Smaller than 480px */
+    @media only screen and (max-width: 480px) {
+        .item {
+            flex: 0 0 120px;
+            height: 200px;
+        }
+
+        .item .name {
+            font-size: 1.2rem;
+        }
+
+        .item .des {
+            font-size: 0.9rem;
+        }
+    }
+
+    /* Header Image */
     #header {
         background-image: url(images/sky.jpeg);
     }
 
-    /* Show the navigation menu on small screens */
-    nav ul {
-        display: none;
-    }
-
+    /* Navigation Styling for Small Screens */
     nav .fas {
         display: block;
         font-size: 25px;
@@ -619,18 +778,16 @@ nav .fas {
         position: fixed;
         top: 0;
         width: 200px;
-        /* Increased the width to accommodate the menu items */
         right: 0;
         height: 100vh;
         padding-top: 50px;
-        transform: translateX(200px);
-        /* Off-canvas menu, initially hidden */
+        transform: translateX(200px); /* Off-canvas initially */
         transition: transform 0.3s ease-in-out;
+        display: none; /* Hidden by default */
     }
 
     nav ul.show {
-        transform: translateX(1);
-        /* Show the menu when 'show' class is applied */
+        transform: translateX(0); /* Display the menu when 'show' class is applied */
     }
 
     nav ul li {
@@ -638,10 +795,11 @@ nav .fas {
         margin: 25px;
     }
 
+    /* Adjustments for Services Section */
     #services {
         height: auto;
-
     }
+
     .services-list div {
         padding: 20px;
         margin: 20px;
@@ -651,31 +809,24 @@ nav .fas {
         margin-left: calc(20% - 8px);
     }
 
-    .about_dot {
+    /* Dots Adjustments */
+    .about_dot, .service_dot, .work_dot {
         position: relative;
         right: -2px;
     }
 
-    .service_dot {
+    /* Contact Section */
+    .contact-left {
         position: relative;
-        right: -2px;
-    }
-
-    .work_dot {
-        position: relative;
-        right: -2px;
-    }
-
-    .contact-left{
-    position: relative;
-    margin-left: 90px;
+        margin-left: 90px;
     }
 
     .sub-title {
         font-size: 50px;
         position: relative;
     }
-    .sub-title > .contact_dot{
+
+    .sub-title > .contact_dot {
         margin-top: 47px;
         margin-left: 4px;
     }
@@ -689,21 +840,178 @@ nav .fas {
 
     #contact p i {
         position: absolute;
-        font-size: 30px; 
+        font-size: 30px;
         margin: -34px 65px;
     }
 
-    .home{
+    /* Home Section */
+    .home {
         padding: 10px 40px;
         text-align: initial;
         margin-bottom: 200px;
     }
-    .max-width{
+
+    .max-width {
         width: 100%;
     }
+
     .home-content {
         position: absolute;
-        margin-bottom: 130px; 
-    } 
+        margin-bottom: 130px;
+    }
 
+    .logo {
+        margin-left: -40px;
+    }
+
+    #time {
+        padding: 190px;
+        margin: -22rem 10rem 0 -50rem;
+    }
+}
+
+/* Adjustments for screens between 600px and 768px */
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+    .services-list div {
+        width: 90%; /* Adjusted width for medium screens */
+    }
+
+    .logo {
+        margin-left: -900px;
+    }
+
+    #time {
+        padding: 10px;
+        margin: -22rem 10rem 0 -50rem;
+    }
+}
+
+/* ---------Navigation */
+/* Navigation menu styling */
+/* Basic styling for the header */
+
+/* Navigation styling */
+nav {
+    position: relative;
+    background: transparent; /* Transparent background for the nav */
+}
+
+/* Navigation menu styling */
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 120px; /* Optional: adds rounded corners */
+    overflow: hidden; /* Ensures background doesn't extend beyond items */
+}
+
+nav ul li {
+    margin: 0 6px;
+}
+
+nav ul li a {
+    color: rgb(174, 197, 25);
+    text-decoration: none;
+    font-size: 20px; /* Adjust the nav font size */
+    transition: color 0.3s;
+    display: block;
+    padding: 10px; /* Adds padding for better spacing */
+    top: 20px;
+}
+
+nav ul li a:hover {
+    color: #f3a112; /* Example hover color */
+}
+
+/* Base styling for icons */
+nav .fas {
+    font-size: 24px;
+    color: rgb(255, 0, 0); /* Intense fire color */
+    cursor: pointer;
+    display: none; /* Hide icons by default */
+    position: absolute;
+    left: 490px;
+    top: -1px;
+    animation: burn 1s infinite;
+    text-shadow: 0 0 20px rgba(255, 0, 0, 1), 0 0 40px rgba(255, 0, 0, 0.8);
+}
+
+/* Animation for intense burning effect */
+@keyframes burn {
+    0% {
+        color: rgb(255, 0, 0); /* Intense red */
+        text-shadow: 0 0 20px rgba(255, 0, 0, 1), 0 0 40px rgba(255, 0, 0, 0.8);
+        transform: scale(1) rotate(0deg);
+    }
+    25% {
+        color: rgb(255, 69, 0); /* Bright orange-red */
+        text-shadow: 0 0 25px rgba(255, 69, 0, 1), 0 0 50px rgba(255, 69, 0, 0.9);
+        transform: scale(1.2) rotate(-10deg);
+    }
+    50% {
+        color: rgb(255, 140, 0); /* Duller orange */
+        text-shadow: 0 0 30px rgba(255, 140, 0, 1), 0 0 60px rgba(255, 140, 0, 0.7);
+        transform: scale(1.5) rotate(10deg);
+    }
+    75% {
+        color: rgb(255, 69, 0); /* Bright orange-red */
+        text-shadow: 0 0 25px rgba(255, 69, 0, 1), 0 0 50px rgba(255, 69, 0, 0.9);
+        transform: scale(1.2) rotate(-10deg);
+    }
+    100% {
+        color: rgb(255, 0, 0); /* Intense red */
+        text-shadow: 0 0 20px rgba(255, 0, 0, 1), 0 0 40px rgba(255, 0, 0, 0.8);
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    /* Hide the menu items by default */
+    nav ul {
+        display: none;
+        position: absolute;
+        top: -2px; /* Adjust based on your header height */
+        right: -70px;
+        width: 120px;
+        flex-direction: column;
+        text-align: center;
+        background: rgba(50, 51, 51, 0.6); /* Semi-transparent background for mobile menu */
+    }
+
+    /* Display menu items when 'show' class is added */
+    nav ul.show {
+        display: flex;
+    }
+
+    /* Show the hamburger menu icon and close icon */
+    nav .fas.fa-bars,
+    nav .fas.fa-times {
+        display: block;
+    }
+
+    /* Initially hide the close icon */
+    nav .fas.fa-times {
+        display: none;
+    }
+
+    /* Style the hamburger menu icon */
+    nav .fas.fa-bars {
+        font-size: 24px;
+    }
+
+    /* Style the close menu icon */
+    nav .fas.fa-times {
+        font-size: 24px;
+    }
+
+    /* Show close icon and hide hamburger when menu is open */
+    nav ul.show ~ .fas.fa-bars {
+        display: none;
+    }
+
+    nav ul.show ~ .fas.fa-times {
+        display: block;
+    }
 }

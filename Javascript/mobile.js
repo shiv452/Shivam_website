@@ -14,13 +14,40 @@
     }
 
     // JavaScript for handling the mobile navigation menu
-    document.querySelector('.fas.fa-bars').addEventListener('click', function () {
-        document.querySelector('nav ul').classList.toggle('show');
-    });
+    // document.querySelector('.fas.fa-bars').addEventListener('click', function () {
+    //     document.querySelector('nav ul').classList.toggle('show');
+    // });
 
-    document.querySelector('.fas.fa-times').addEventListener('click', function () {
-        document.querySelector('nav ul').classList.remove('show');
-    });
+    // document.querySelector('.fas.fa-times').addEventListener('click', function () {
+    //     document.querySelector('nav ul').classList.remove('show');
+    // });
+    // Function to toggle the visibility of the menu
+function toggleMenu(toggleButtonSelector, menuSelector, classToToggle) {
+    const toggleButton = document.querySelector(toggleButtonSelector);
+    const menu = document.querySelector(menuSelector);
+
+    if (toggleButton && menu) {
+        toggleButton.addEventListener('click', function () {
+            menu.classList.toggle(classToToggle);
+        });
+    }
+}
+
+// Function to close the menu
+function closeMenu(closeButtonSelector, menuSelector, classToRemove) {
+    const closeButton = document.querySelector(closeButtonSelector);
+    const menu = document.querySelector(menuSelector);
+
+    if (closeButton && menu) {
+        closeButton.addEventListener('click', function () {
+            menu.classList.remove(classToRemove);
+        });
+    }
+}
+
+toggleMenu('.fas.fa-bars', 'nav ul', 'show');
+closeMenu('.fas.fa-times', 'nav ul', 'show');
+
 
 
     //typing Text Animation
