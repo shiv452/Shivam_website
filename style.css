@@ -1,3 +1,4 @@
+/* Global Style Reset */
 * {
     margin: 0;
     padding: 0;
@@ -5,15 +6,18 @@
     box-sizing: border-box;
 }
 
+/* Smooth scrolling behavior */
 html {
     scroll-behavior: smooth;
 }
 
+/* Base body styling */
 body {
     background: #080808;
     color: #fff;
 }
 
+/* ----------HEADER---------- */
 #header {
     width: 100%;
     height: 100vh;
@@ -22,56 +26,18 @@ body {
     background-position: center;
 }
 
+/* ----------CONTAINER---------- */
 .container {
     padding: 10px 10%;
 }
 
+/* Logo styling */
 .logo {
     width: 100px;
     margin-left: -120px;
 }
 
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-nav ul {
-    display: flex;
-    gap: 20px;
-    list-style: none;
-}
-
-nav ul li {
-    display: inline-block;
-}
-
-nav ul li a {
-    color: rgb(162, 231, 14);
-    text-decoration: none;
-    font-size: 1.125rem; /* Use rem instead of px for scalable fonts */
-    position: relative;
-}
-
-
-nav ul li a::after {
-    content: '';
-    width: 0;
-    height: 3px;
-    background: white;
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    transition: width 0.5s;
-}
-
-nav ul li a:hover::after {
-    width: 100%;
-}
-
-/*home*/
+/* ----------HOME SECTION---------- */
 .home {
     display: flex;
     align-items: center;
@@ -112,7 +78,7 @@ nav ul li a:hover::after {
     -webkit-text-fill-color: transparent;
 }
 
-/* Time Styling */
+/* ----------Time Styling---------- */
 #time
 {
     display: flex;
@@ -124,15 +90,6 @@ nav ul li a:hover::after {
 
 #time .circle 
 {
-    /* position: relative;
-    width: 10px;
-    height: 150px;
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    margin-top: 150px;
-    margin-left: 6vh;
-    color: #41e9db; */
     position: relative;
     width: 100px;
     height: 100px;
@@ -154,7 +111,7 @@ nav ul li a:hover::after {
 #time div span
 {
     font-size: 0.75em;
-    background: linear-gradient(125deg, navy, rgb(188, 31, 220), rgb(73, 225, 23));
+    background: linear-gradient(125deg, navy, rgb(188, 31, 220), rgb(73,225, 23));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -510,6 +467,8 @@ nav ul li a:hover::after {
     font-size: 25px;
 }
 
+/* ----------Social Icon Styling---------- */
+
 .social-icons {
     margin-top: 30px;
 }
@@ -563,6 +522,8 @@ form textarea {
     border-radius: 6px;
 }
 
+/* ---------- CopyRight Styling ---------- */
+
 .copyright {
     width: 100%;
     text-align: center;
@@ -581,12 +542,7 @@ form textarea {
     color: #fff;
 }
 
-nav .fas {
-    display: none;
-}
-/* Start */
-
-/* Container for the Achievement Section */
+/* ---------- Achievement Section---------- */
 .achive-section {
     position: relative;
     width: 100%;
@@ -609,11 +565,11 @@ nav .fas {
 
 .achive-container {
     position: relative;
-    width: 90%;
-    max-width: 1200px;
+    width: 100%;
+    max-width: 120%;
     height: auto;
-    padding: 50px;
-    background-color: rgba(255, 255, 255, 0.8);
+    padding: 100px;
+    background-color: rgba(218, 213, 213, 0.8);
     box-shadow: 0 30px 50px rgba(219, 219, 219, 0.7);
     z-index: 1;
     overflow: hidden;
@@ -715,10 +671,101 @@ nav .fas {
     background-color: #bac383;
 }
 
-/* @Media code for Mobile Screen */
+
+/* ---------- Navigation Section ---------- */
+
+/* Navigation styling*/
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+nav .fas {
+    display: none;
+}
+
+/* Navigation menu styling */
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 120px; /* Optional: adds rounded corners */
+    overflow: hidden; /* Ensures background doesn't extend beyond items */
+}
+
+nav ul li {
+    margin: 0 6px;
+}
+
+nav ul li a {
+    color: rgb(88, 185, 224);
+    text-decoration: none;
+    font-size: 20px; /* Adjust the nav font size */
+    transition: color 0.3s;
+    display: block;
+    padding: 10px; /* Adds padding for better spacing */
+}
+
+nav ul li a:hover {
+    color: #0933a8; /* Example hover color */
+}
+
+/* Base styling for icons */
+nav .fas {
+    font-size: 24px;
+    color: rgb(255, 0, 0); /* Intense fire color */
+    cursor: pointer;
+    display: none; /* Hide icons by default */
+    position: absolute;
+    left: 490px;
+    top: -1px;
+    animation: burn 1s infinite;
+    text-shadow: 0 0 20px rgba(255, 0, 0, 1), 0 0 40px rgba(255, 0, 0, 0.8);
+}
+
+/* Animation for intense burning effect */
+@keyframes burn {
+    0% {
+        color: rgb(255, 0, 0); /* Intense red */
+        text-shadow: 0 0 20px rgba(255, 0, 0, 1), 0 0 40px rgba(255, 0, 0, 0.8);
+        transform: scale(1) rotate(0deg);
+    }
+    25% {
+        color: rgb(255, 69, 0); /* Bright orange-red */
+        text-shadow: 0 0 25px rgba(255, 69, 0, 1), 0 0 50px rgba(255, 69, 0, 0.9);
+        transform: scale(1.2) rotate(-10deg);
+    }
+    50% {
+        color: rgb(255, 140, 0); /* Duller orange */
+        text-shadow: 0 0 30px rgba(255, 140, 0, 1), 0 0 60px rgba(255, 140, 0, 0.7);
+        transform: scale(1.5) rotate(10deg);
+    }
+    75% {
+        color: rgb(255, 69, 0); /* Bright orange-red */
+        text-shadow: 0 0 25px rgba(255, 69, 0, 1), 0 0 50px rgba(255, 69, 0, 0.9);
+        transform: scale(1.2) rotate(-10deg);
+    }
+    100% {
+        color: rgb(255, 0, 0); /* Intense red */
+        text-shadow: 0 0 20px rgba(255, 0, 0, 1), 0 0 40px rgba(255, 0, 0, 0.8);
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+
+/* Note :  Common breakpoints:
+max-width: 480px for small mobile devices.
+min-width: 481px and max-width: 768px for tablets.
+min-width: 769px and max-width: 1024px for small desktops/larger tablets.
+min-width: 1025px for larger desktops. */
+/* Code for mobile, Laptop, Desktop and Tablet */
+/*  code for Mobile Screen */
 
 /* ----------Unified Media Queries for All Screen Sizes---------- */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
     
     /* Achievements Container */
     .achive-container {
@@ -745,22 +792,6 @@ nav .fas {
         font-size: 1rem;
     }
 
-
-    /* Special Handling for Screens Smaller than 480px */
-    @media only screen and (max-width: 480px) {
-        .item {
-            flex: 0 0 120px;
-            height: 200px;
-        }
-
-        .item .name {
-            font-size: 1.2rem;
-        }
-
-        .item .des {
-            font-size: 0.9rem;
-        }
-    }
 
     /* Header Image */
     #header {
@@ -861,7 +892,7 @@ nav .fas {
     }
 
     .logo {
-        margin-left: -40px;
+        margin-left: -20px;
     }
 
     #time {
@@ -871,99 +902,24 @@ nav .fas {
 }
 
 /* Adjustments for screens between 600px and 768px */
-@media only screen and (min-width: 600px) and (max-width: 768px) {
+@media only screen and (min-width: 481px) and (max-width: 1020px) {
     .services-list div {
-        width: 90%; /* Adjusted width for medium screens */
+        width: 80%; /* Adjusted width for medium screens */
     }
 
     .logo {
-        margin-left: -900px;
+        margin-left: -60px;
     }
 
     #time {
         padding: 10px;
-        margin: -22rem 10rem 0 -50rem;
+        margin: -12rem 12rem 0 -60rem;
     }
-}
 
-/* ---------Navigation */
-/* Navigation menu styling */
-/* Basic styling for the header */
-
-/* Navigation styling */
-nav {
-    position: relative;
-    background: transparent; /* Transparent background for the nav */
-}
-
-/* Navigation menu styling */
-nav ul {
-    display: flex;
-    list-style: none;
-    margin: 20px;
-    padding: 10px;
-    border-radius: 120px; /* Optional: adds rounded corners */
-    overflow: hidden; /* Ensures background doesn't extend beyond items */
-}
-
-nav ul li {
-    margin: 0 6px;
-}
-
-nav ul li a {
-    color: rgb(174, 197, 25);
-    text-decoration: none;
-    font-size: 20px; /* Adjust the nav font size */
-    transition: color 0.3s;
-    display: block;
-    padding: 10px; /* Adds padding for better spacing */
-    top: 20px;
-}
-
-nav ul li a:hover {
-    color: #f3a112; /* Example hover color */
-}
-
-/* Base styling for icons */
-nav .fas {
-    font-size: 24px;
-    color: rgb(255, 0, 0); /* Intense fire color */
-    cursor: pointer;
-    display: none; /* Hide icons by default */
-    position: absolute;
-    left: 490px;
-    top: -1px;
-    animation: burn 1s infinite;
-    text-shadow: 0 0 20px rgba(255, 0, 0, 1), 0 0 40px rgba(255, 0, 0, 0.8);
-}
-
-/* Animation for intense burning effect */
-@keyframes burn {
-    0% {
-        color: rgb(255, 0, 0); /* Intense red */
-        text-shadow: 0 0 20px rgba(255, 0, 0, 1), 0 0 40px rgba(255, 0, 0, 0.8);
-        transform: scale(1) rotate(0deg);
+    nav ul {
+        width: 150px;
     }
-    25% {
-        color: rgb(255, 69, 0); /* Bright orange-red */
-        text-shadow: 0 0 25px rgba(255, 69, 0, 1), 0 0 50px rgba(255, 69, 0, 0.9);
-        transform: scale(1.2) rotate(-10deg);
-    }
-    50% {
-        color: rgb(255, 140, 0); /* Duller orange */
-        text-shadow: 0 0 30px rgba(255, 140, 0, 1), 0 0 60px rgba(255, 140, 0, 0.7);
-        transform: scale(1.5) rotate(10deg);
-    }
-    75% {
-        color: rgb(255, 69, 0); /* Bright orange-red */
-        text-shadow: 0 0 25px rgba(255, 69, 0, 1), 0 0 50px rgba(255, 69, 0, 0.9);
-        transform: scale(1.2) rotate(-10deg);
-    }
-    100% {
-        color: rgb(255, 0, 0); /* Intense red */
-        text-shadow: 0 0 20px rgba(255, 0, 0, 1), 0 0 40px rgba(255, 0, 0, 0.8);
-        transform: scale(1) rotate(0deg);
-    }
+
 }
 
 /* Media query for mobile devices */
@@ -974,7 +930,7 @@ nav .fas {
         position: absolute;
         top: -2px; /* Adjust based on your header height */
         right: -70px;
-        width: 120px;
+        width: 10px;
         flex-direction: column;
         text-align: center;
         background: rgba(50, 51, 51, 0.6); /* Semi-transparent background for mobile menu */
@@ -1013,5 +969,21 @@ nav .fas {
 
     nav ul.show ~ .fas.fa-times {
         display: block;
+    }
+}
+
+   /* Special Handling for Screens Smaller than 480px */
+@media only screen and (max-width: 1200px) {
+    .item {
+        flex: 0 0 120px;
+        height: 200px;
+    }
+
+    .item .name {
+        font-size: 1.2rem;
+    }
+
+    .item .des {
+        font-size: 0.9rem;
     }
 }
