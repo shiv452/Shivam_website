@@ -34,10 +34,13 @@ body {
 
 /* Logo styling */
 .logo {
-    width: 100px;
-    margin-left: -120px;
+    width: 10rem;
+    margin-left: -140px;
+    margin-bottom: 20px;
+    transition: transform 0.5s ease;
+    transform-style: preserve-3d; /* Enable 3D transformation */
+    cursor: pointer;
 }
-
 /* ----------HOME SECTION---------- */
 .home {
     display: flex;
@@ -467,7 +470,6 @@ body {
 }
 
 /* ----------Social Icon Styling---------- */
-
 .social-icons {
     margin-top: 30px;
 }
@@ -542,7 +544,6 @@ form textarea {
 }
 
 /* ---------- Achievement Section---------- */
-
 /* carousel */
 .carousel{
     height: 100vh;
@@ -560,7 +561,7 @@ form textarea {
 .carousel .list .item img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: fill;
 }
 .carousel .list .item .content{
     position: absolute;
@@ -606,7 +607,6 @@ form textarea {
     border: 1px solid #fff;
     color: #eee;
 }
-/* thumbail */
 .thumbnail{
     position: absolute;
     bottom: 50px;
@@ -637,9 +637,11 @@ form textarea {
 }
 .thumbnail .item .content .title{
     font-weight: 500;
+    color: #828080;
 }
 .thumbnail .item .content .description{
     font-weight: 300;
+    color: #828080;
 }
 /* arrows */
 .arrows{
@@ -657,16 +659,16 @@ form textarea {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: #eee4;
+    background-color: rgba(44, 225, 156, 0.267);
     border: none;
-    color: #fff;
+    color: rgb(201, 59, 229);
     font-family: monospace;
     font-weight: bold;
     transition: .5s;
 }
 .arrows button:hover{
     background-color: #fff;
-    color: #000;
+    color: rgb(13, 13, 13);
 }
 
 /* animation */
@@ -675,7 +677,6 @@ form textarea {
 }
 
 /* animation text in first item */
-
 .carousel .list .item:nth-child(1) .content .author,
 .carousel .list .item:nth-child(1) .content .title,
 .carousel .list .item:nth-child(1) .content .topic,
@@ -699,9 +700,11 @@ form textarea {
 }
 .carousel .list .item:nth-child(1) .content .topic{
     animation-delay: 1.4s!important;
+    /* color: #828080; */
 }
 .carousel .list .item:nth-child(1) .content .des{
     animation-delay: 1.6s!important;
+    /* color: #828080; */
 }
 .carousel .list .item:nth-child(1) .content .buttons{
     animation-delay: 1.8s!important;
@@ -750,7 +753,6 @@ form textarea {
 }
 
 /* running time */
-
 .carousel .time{
     position: absolute;
     z-index: 1000;
@@ -770,9 +772,7 @@ form textarea {
     to{width: 0}
 }
 
-
 /* prev click */
-
 .carousel.prev .list .item:nth-child(2){
     z-index: 2;
 }
@@ -783,6 +783,7 @@ form textarea {
     bottom: 0;
     left: 0;
 }
+
 @keyframes outFrame{
     to{
         width: 150px;
@@ -802,6 +803,7 @@ form textarea {
 .carousel.prev .arrows button{
     pointer-events: none;
 }
+
 .carousel.prev .list .item:nth-child(2) .content .author,
 .carousel.prev .list .item:nth-child(2) .content .title,
 .carousel.prev .list .item:nth-child(2) .content .topic,
@@ -819,6 +821,15 @@ form textarea {
     }
 }
 
+.des {
+    color: #3c3a3a;
+    display: flex;
+    margin-right: 150px;
+}
+.author {
+    color: #797777;
+}
+.title {color: #f2eded;}
 /* ---------- Navigation Section ---------- */
 
 /* Navigation styling*/
@@ -837,14 +848,11 @@ nav .fas {
 nav ul {
     display: flex;
     list-style: none;
-    margin: 20px;
-    padding: 10px;
-    border-radius: 120px; /* Optional: adds rounded corners */
-    overflow: hidden; /* Ensures background doesn't extend beyond items */
+    margin: 1px 20px 100px;
 }
 
 nav ul li {
-    margin: 0 6px;
+    margin: 0 10px;
 }
 
 nav ul li a {
