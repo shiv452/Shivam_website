@@ -942,18 +942,6 @@ min-width: 1025px for larger desktops. */
 
 /* ----------Small Screen (max-width: 600px)---------- */
 @media only screen and (max-width: 600px) {
-    
-    /* Achievements Container */
-    .achive-container {
-        display: flex;
-        width: 100%;
-        padding: 20px;
-        position: relative;
-        flex-wrap: wrap;       
-        justify-content: center; 
-        align-items: center;
-    }
-
     /* Item Flex Adjustments */
     .item {
         flex: 0 0 150px;
@@ -1196,19 +1184,39 @@ min-width: 1025px for larger desktops. */
     }
 
     nav ul {
-        width: 150px;
+        display: none;
+        width: 140px;
+        border-radius: 100%;
+        padding: 10px;
     }
 
     nav .fas {
-        display: block;
-        font-size: 15px;
-        margin-left: -250px;
-        margin-top: 15px;
+        display: flex;
+        margin-top: -50px;
+        left: 30px;
+        
     }
 
     #time {
-        margin-right: 400px;
+        margin-right: 200px;
+        margin-top: -350px;
     }
+
+    .about-col-2 p {
+        font-size: 10px; 
+        line-height: 1.0; 
+        text-align: start; 
+    }
+
+    .logo {
+        margin-left: -20px;
+        /* border-radius: 100px; */
+    }
+
+    #home {
+        margin-top: -100px;
+    }
+
 }
 
 /* ----------Media Query for Mobile Devices (max-width: 768px)---------- */
