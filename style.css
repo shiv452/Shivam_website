@@ -910,6 +910,50 @@ nav .fas {
     }
 }
 
+/* Up Arrow styling */
+/* Style for the 'back-to-top' div */
+/* Style for the 'back-to-top' div */
+.back-to-top {
+    position: fixed;
+    bottom: 80px;
+    right: 10px;
+    background-color: #333;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 24px;
+    display: none; /* Initially hidden */
+    z-index: 1000;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6); /* Initial glow effect */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Glowing hover effect */
+.back-to-top:hover {
+    background-color: rgb(89, 186, 231);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.9), 0 0 30px rgba(255, 255, 255, 0.7), 0 0 40px rgba(255, 255, 255, 0.5);
+}
+
+/* Glowing pulse animation */
+@keyframes glowing {
+    0% {
+        box-shadow: 0 0 15px rgba(235, 100, 181, 0.6), 0 0 30px rgba(64, 228, 56, 0.888);
+    }
+    50% {
+        box-shadow: 0 0 25px rgba(56, 221, 204, 0.9), 0 0 40px rgba(255, 255, 255, 0.7);
+    }
+    100% {
+        box-shadow: 0 0 15px rgba(143, 61, 225, 0.6), 0 0 30px rgba(255, 255, 255, 0.3);
+    }
+}
+
+/* Apply animation */
+.back-to-top {
+    animation: glowing 1s infinite ease-in-out;
+}
+
+
 
 /* Note :  Common breakpoints:
 max-width: 480px for small mobile devices.
@@ -966,7 +1010,7 @@ min-width: 1025px for larger desktops. */
         display: block;
         font-size: 15px;
         margin-left: -130px;
-        margin-top: 15px;
+        margin-top: 25px;
     }
 
     nav ul {
@@ -983,12 +1027,12 @@ min-width: 1025px for larger desktops. */
     }
 
     nav ul.show {
-        transform: translateX(-25px); /* Display the menu when 'show' class is applied */
+        transform: translateX(-15px); /* Display the menu when 'show' class is applied */
     }
 
     nav ul li {
         display: block;
-        margin: -0px -9px;
+        margin: -0px -10px;
     }
 
     /* Adjustments for Services Section */
@@ -1116,12 +1160,13 @@ min-width: 1025px for larger desktops. */
     nav ul {
         display: none;
         position: absolute;
-        top: -10px; /* Adjust based on your header height */
-        right: -10px;
-        width: 150px;
+        top: 10px; /* Adjust based on your header height */
+        right: -30px;
+        width: 10px;
         flex-direction: column;
         text-align: center;
-        background: rgba(50, 51, 51, 0.9); /* Semi-transparent background for mobile menu */
+        background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(146, 39, 213, 0.8)); /* Semi-transparent background */
+ /* Semi-transparent background for mobile menu */
     }
     nav .fas {
         display: block;

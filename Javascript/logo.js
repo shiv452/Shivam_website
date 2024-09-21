@@ -42,9 +42,9 @@ const logo = document.getElementById('logo');
         styleSheet.insertRule(`
             @keyframes spin3D {
                 10% {
-                    transform: rotateX(10deg) rotateY(10deg);
+                    transform: rotateX(30deg) rotateY(20deg);
                 }
-                50% {
+                60% {
                     transform: rotateY(160deg) rotateY(160deg);
                 }
                 100% {
